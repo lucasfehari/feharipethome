@@ -1,7 +1,7 @@
 # Welcome to your Fehari Deb
 
 ## Project info
-
+npm run dev
 
 
 ## How can I edit this code?
