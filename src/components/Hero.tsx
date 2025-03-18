@@ -1,10 +1,11 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement>(null);
-  
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -49,9 +50,12 @@ const Hero: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-slide-up opacity-0" style={{animationDelay: '900ms', animationFillMode: 'forwards'}}>
             <a 
-              href="#contato" 
+              href="https://wa.me/seunumerodetelefone" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-primary text-white px-6 py-3 rounded-lg font-medium inline-flex items-center justify-center hover:bg-primary/90 transition-all duration-300 ease-in-out shadow-md hover:shadow-lg"
             >
+              <FontAwesomeIcon icon={faWhatsapp} className="mr-2" />
               Agendar Agora
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
@@ -63,7 +67,7 @@ const Hero: React.FC = () => {
             </a>
           </div>
         </div>
-        
+
         <div className="order-1 md:order-2 relative animate-scale-in opacity-0" style={{animationDelay: '1000ms', animationFillMode: 'forwards'}}>
           <div className="w-full h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
             <img 
